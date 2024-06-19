@@ -1,0 +1,89 @@
+body, text{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+.container{
+    background-color: #3579F5;
+    width: 743px;
+    border-radius: 10px;
+    padding: 15px 15px;
+}
+.container__items{
+    display: flex;
+    align-items: center;
+}
+.progress{
+    position: relative;
+    width: 60px; 
+    height: 60px;
+}
+.progress__circle{
+    width: 100%;  
+    --circumference:calc(2 * 3.14159 * 28); /* Окружность круга */
+    --dasharray: calc(var(--circumference) * (var(--percent) / 100)) var(--circumference);
+}
+circle {
+    transform-origin: center;
+    transform-box: fill-box;
+    transform: rotate(-90deg);
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-width: 2px;
+    fill: none;
+}
+.main-circle {
+    stroke: #FFFFFF;
+    stroke-opacity: 0.5;
+}
+  
+.percent-circle {
+    stroke: #FFFFFF;
+    stroke-width: 2px;
+    stroke-dasharray: var(--dasharray); ;
+}
+.progress__text{
+    font-size: 20px;
+    line-height: 30px;
+    position: absolute;
+    top: 25%;
+    left: 23%; 
+}
+.text-container{
+    margin-left: 2%;
+}
+.text-container > div:not(:last-child) {
+    margin-bottom: 2px; /* Отступ между каждым элементом, кроме последнего */
+}
+.text-container__checklist{
+    width: 76px;
+    height: 18px;
+    border-radius: 25px;
+    background-color: #2364DB;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-container__ready{
+    font-size: 15px;
+    font-weight: 600;
+}
+.text-container__next-action{
+    font-size: 12px;
+    line-height: 18px;
+}
+.open-btn{
+    margin-left: auto;
+    margin-right: 0;
+    padding: 10px 32px 10px 32px;
+    border-radius: 6px;
+    border: none;
+    background-color: #F4F8FF;
+    color: #4777ED;
+    font-size: 14px;
+    cursor: pointer;
+}
